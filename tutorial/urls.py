@@ -16,14 +16,15 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import include, path
-'''
+
+"""
 Solução para o mapeamento da url direto na raiz,
 path('', include('suaUrl.urls'))
 Colocar também o mapeamento para suaUrl
 path('suaUrl/', include('suaUrl.urls'))
-'''
+"""
 urlpatterns = [
-    path('', include('polls.urls')),
-    path('polls/', include('polls.urls')),
-    path('admin/', admin.site.urls),
+    path("", include("polls.urls")),
+    path("polls/", include("polls.urls")),
+    path("admin/", admin.site.urls),
 ]
