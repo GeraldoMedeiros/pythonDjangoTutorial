@@ -24,7 +24,8 @@ Colocar também o mapeamento para suaUrl
 path('suaUrl/', include('suaUrl.urls'))
 """
 urlpatterns = [
-    path("", include("polls.urls")),
+
     path("polls/", include("polls.urls")),
     path("admin/", admin.site.urls),
+    path("", include("polls.urls")),
 ]
